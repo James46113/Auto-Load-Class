@@ -117,26 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Friday" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Friday.csv;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
-  </data>
-  <data name="Monday" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Monday.csv;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
-  </data>
-  <data name="Saturday" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Saturday.csv;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
-  </data>
-  <data name="Sunday" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Sunday.csv;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
-  </data>
-  <data name="Thursday" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Thursday.csv;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
-  </data>
-  <data name="Tuesday" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Tuesday.csv;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
-  </data>
-  <data name="Wednesday" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Wednesday.csv;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
-  </data>
 </root>

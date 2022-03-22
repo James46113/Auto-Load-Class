@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.VisualBasic.FileIO;
 using System.Reflection;
-
+using System.IO;
 
 namespace Auto_Load_Class_Prototype
 {
@@ -32,10 +32,18 @@ namespace Auto_Load_Class_Prototype
         private List<string> LoadClass()
         {
             int[] times = { 515, 575, 630, 645, 660, 615, 730, 760, 790, 820, 875, 930, 990, 1440 };
-            List<List<string>> classData = new List<List<String>>();
-            foreach (string item in Properties.Resources.ResourceManager.GetString(DateTime.Now.DayOfWeek.ToString()).Split(new string[] { Environment.NewLine }, StringSplitOptions.None))
+            List<List<List<string>>> classData = new List<List<List<string>>>();
+            using (StreamReader f = new StreamReader("classes.cls"))
             {
-                classData.Add(item.Split(',').ToList());
+                foreach (string day in f.ReadToEnd().Split(new string[] { Environment.NewLine }, StringSplitOptions.None))
+                {
+                    List<List<string>> tempDay = new List<List<string>>();
+                    foreach (string period in day.Split('@'))
+                    {
+                        tempDay.Add(period.Split(',').ToList());
+                    }
+                    classData.Add(tempDay);
+                }
             }
 
             int timeNum = int.Parse(DateTime.Now.ToString("HH")) * 60 + int.Parse(DateTime.Now.ToString("mm"));
@@ -51,9 +59,9 @@ namespace Auto_Load_Class_Prototype
             }
             try
             {
-                if (ind != 0 & ind != 13)
+                if (ind != 0 & ind != 13 & (int)(DateTime.Now.DayOfWeek+6)%7 < 5)
                 {
-                    return classData[ind];
+                    return classData[(int)(DateTime.Now.DayOfWeek+6)%7][ind-1];
                 }
                 else
                 {
